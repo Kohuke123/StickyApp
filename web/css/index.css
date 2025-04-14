@@ -1,0 +1,22 @@
+/*.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: hotpink;
+    border-radius: 10px;
+}*/
+.menu-container{
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 25px 25px 25px 5px;
+    width: 250px;
+    height: 300px;
+    overflow-y: auto; /*Adds an vertical scrollbar*/
+    background-color: #fff;
+}
+
+.h1{
+    font-size: 15px;
+    text-align: center; /* MAybe teha eraldi centre värk et saaks ka mujal kasutada*/
+}
