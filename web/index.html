@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +10,31 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="eel.js"></script>
 </head>
+
 <body>
     <div class="container">
         <div class="menu-container">
             <label class="label">Notes</label>
+            <div class="notes-container">
+                <table class="table table striped">
+                    <tbody id="notes-table-body"></tbody>
+                </table>
+            </div>
         </div>
     </div>
 
     <div class="col-auto">
         <div class="button-wrapper">
             <input type="text" class="input" id="note-title-input" minlength="3" maxlength="20" placeholder="Title">
-            <button class="button button1">Add &plus;</button>
+            <button type="submit" class="button button1" id="note-add-button">Add &plus;</button>
             <button type="sumbit" class="button button1">Delete</button>
         </div>
     </div>
+
+    <script src="eel.js"></script>
+    <script src="jquery/jquery.js"></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

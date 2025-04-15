@@ -1,21 +1,35 @@
-.menu-container{
+.menu-container {
     border: 2px solid pink;
     border-radius: 10px;
     padding: 5px;
-    margin:20px 2px 5px 5px;
+    margin: 20px 2px 5px 5px;
     width: 250px;
     height: 300px;
-    overflow-y: auto; /*Adds an vertical scrollbar*/
+    overflow-y: auto;
+    /*Adds an vertical scrollbar*/
     background-color: #fff;
 }
 
-.label{
-    display: block;
-    font-size: 15px;
-    text-align: center; /* MAybe teha eraldi centre värk et saaks ka mujal kasutada*/
+.notes-container {
+    /* border: 2px solid pink;
+    border-radius: 10px; */
+    padding: 10px;
+    margin: 2px 2px 5px 5px;
+    width: 225px;
+    height: 250px;
+    overflow-y: auto;
+    /*Adds an vertical scrollbar*/
+    background-color: #fff;
 }
 
-.button{
+.label {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    /* MAybe teha eraldi centre värk et saaks ka mujal kasutada*/
+}
+
+.button {
     background-color: pink;
     border: peachpuff;
     border-radius: 10px;
@@ -29,22 +43,22 @@
     cursor: pointer;
 }
 
-.button1{
+.button1 {
     background-color: white;
     color: #333;
     border: 2px solid pink;
 }
 
-.button1:hover{
+.button1:hover {
     background-color: pink;
     color: #fff;
 }
 
-.button-wrapper{
+.button-wrapper {
     margin-left: 5%;
 }
 
-.input{
+.input {
     margin-left: 10px;
     width: 50%;
 }
