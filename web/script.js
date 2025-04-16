@@ -17,6 +17,7 @@ function displayNote(note) {
 // Function to display all the notes
 eel.expose
 function displayAllNotes(notes) {
+
     for (let note of notes["notes"]) {
         displayNote(note);
     }
@@ -31,4 +32,4 @@ note_add_button.addEventListener("click", (event) => { // When the user clicks o
 
 })
 
-eel.list_note()(displayAllNotes)
+eel.list_note()(displayAllNotes);

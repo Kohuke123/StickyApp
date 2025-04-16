@@ -1,9 +1,9 @@
 import eel
 import json
 
-notes_count = 0 # VAriable to keep track of the number of notess
+notes_count = 0
 eel.init('web')
-
+# Loading and opening the json file
 def read_data():
     with open("data.json", "r") as file:
         content = json.loads(file.read()) # Turns json data into py data so I can use it
@@ -11,11 +11,11 @@ def read_data():
 
 def write_data(content):
     with open("data.json", "w") as file:
-        file.write(json.dumps(content)) #Saves and turns python data into a json string
+        file.write(json.dumps(content)) 
     return content
 
-@eel.expose
 #Function to create a new note
+@eel.expose
 def create_note(title):
     global notes_count
 
@@ -45,6 +45,6 @@ if not os.path.exists('data.json'):
 
 else:
     content = read_data()
-    note_count = len(content['notes']) # Counts the existing notes
+    notes_count = len(content['notes']) # Counts the existing notes
     
 eel.start('index.html', size=(300, 400))
