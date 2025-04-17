@@ -3,7 +3,8 @@ const note_add_button = document.getElementById("note-add-button")
 const notes_table_body = document.getElementById("notes-table-body")
 
 eel.expose
-function displayNote(note) {
+function displayNote(note) { // See vist ei include datat?
+    console.log("Displaying note:", note);
     let tr = document.createElement("tr") // Tablerow
     let td = document.createElement("td") // Title cell
     td.innerText = note['title'];
@@ -32,4 +33,15 @@ note_add_button.addEventListener("click", (event) => { // When the user clicks o
 
 })
 
-eel.list_note()(displayAllNotes);
+// eel.list_note()(displayAllNotes);
+document.addEventListener("DOMContentLoaded", () => {
+    function tryListNotes() {
+      if (eel._websocket.readyState === WebSocket.OPEN) {
+        eel.list_note()(displayAllNotes);
+      } else {
+        // Try again in 100ms
+        setTimeout(tryListNotes, 100);
+      }
+    }
+    tryListNotes();
+  });
