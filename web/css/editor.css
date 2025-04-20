@@ -1,0 +1,11 @@
+.note-container {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px 2px 5px 5px;
+    width: 200px;
+    height: 200px;
+    overflow-y: auto;
+    /*Adds an vertical scrollbar*/
+    background-color: #fff;
+}
