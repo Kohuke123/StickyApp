@@ -21,7 +21,8 @@ def create_note(title):
 
     new_note = { # This dictionary assings a new id to every note
         "id": notes_count + 1,
-        "title": title
+        "title": title,
+        "content": ""
     }
 
     content = read_data()
@@ -31,6 +32,20 @@ def create_note(title):
     notes_count += 1 # Next note has a new id
 
     return new_note
+
+# Function that saves the content of the note
+@eel.expose
+def write_note(note_id, text):
+    data = read_data()
+
+    for note in data['notes']: # For each element in that list, call it note and run the body of the loop
+        if note['id'] == note_id:
+            note['content'] = text
+            break # So it does not contoniue to look at other notes
+    else:
+        print("No note with id={note_id}")
+
+
 
 @eel.expose
 def list_note(): # Lists all the notes in the json file

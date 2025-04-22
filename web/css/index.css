@@ -6,19 +6,15 @@
     width: 250px;
     height: 300px;
     overflow-y: auto;
-    /*Adds an vertical scrollbar*/
     background-color: #fff;
 }
 
 .notes-container {
-    /* border: 2px solid pink;
-    border-radius: 10px; */
     padding: 10px;
     margin: 2px 2px 5px 5px;
     width: 225px;
     height: 250px;
     overflow-y: auto;
-    /*Adds an vertical scrollbar*/
     background-color: #fff;
 }
 
@@ -26,7 +22,6 @@
     display: block;
     font-size: 15px;
     text-align: center;
-    /* MAybe teha eraldi centre värk et saaks ka mujal kasutada*/
 }
 
 .button {
